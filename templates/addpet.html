@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block button %}
+    <a class="back-btn" href="{{ url_for('index') }}">
+        <i class="fas fa-caret-left"></i>
+        Back
+    </a>
+{% endblock %}
+
+{% block content %}
+    <section id="form">
+        <form action="{{ url_for('add_pet') }}" method="POST">
+            <div class="columns">
+                <div class="col1">
+                    <div class="form-container">
+                        <label for="name">Recipe Title</label>
+                        <input id="name" name="name" type="text" placeholder="Pizza">
+                    </div>
+                    <div class="form-container">
+                        <label for="age">Recipe Ingredients</label>
+                        <input id="age" name="age" type="text" placeholder="Tomatoes, Pepperoni,...">
+                    </div>
+                    <div class="form-container">
+                        <label for="breed">Ingredients Name</label>
+                        <input id="breed" name="breed" type="text" placeholder="Flour,Yeast,Cheese,...">
+                    </div>
+                    <div class="form-container">
+                        <label for="url"><i class="fas fa-camera"></i> URL</label>
+                        <input id="url" name="url" type="text" placeholder="Photo link">
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="form-container">
+                        <label for="color">Recipe Cuisine</label>
+                        <input id="color" name="color" type="text" placeholder="Margherita Pizza">
+                    </div>
+                    <div class="form-container">
+                        <label for="size">Recipe Direction</label>
+                        <input id="size" name="size" type="text" placeholder="Preheat oven to 450°F">
+                    </div>
+                    <div class="form-container">
+                        <label for="weight">Recipe Information</label>
+                        <input id="weight" name="weight" type="text" placeholder="1 1/2 cups warm water">
+                    </div>
+                    <div class="form-container">
+                        <label for="alt">Image Alt Text</label>
+                        <input id="alt" name="alt" type="text" placeholder="This photo is...">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="col1">
+                    <fieldset>
+                        <div>
+                            <legend>Recipe Favorite</legend>
+                            <input id="dog" type="radio" name="pet" value="Dog">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="dog">Bad</label>
+                            <input id="cat" type="radio" name="pet" value="Cat">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="cat">Satisfactory</label>
+                            <input id="other" type="radio" name="pet" value="Other">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="other">Great</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div>
+                            <legend>Recipe Weight Conversion</legend>
+                            <input id="female" type="radio" name="gender" value="Imperial">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="female">Imperial</label>
+                            <input id="male" type="radio" name="gender" value="Metric">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="male">Metric</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col2">
+                    <fieldset>
+                        <div>
+                            <legend>Health Score</legend>
+                            <input id="true" type="radio" name="spay" value="Low Risk">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="true">Low Risk</label>
+                            <input id="false" type="radio" name="spay" value="Medium Risk">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="false">Medium Risk</label>
+                            <input id="na" type="radio" name="spay" value="High Risk">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="na">High Risk</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div>
+                            <legend>Skill Level</legend>
+                            <input id="yes" type="radio" name="housetrained" value="Beginner">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="yes">Beginner</label>
+                            <input id="no" type="radio" name="housetrained" value="Intermediate">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="no">Intermediate</label>
+                            <input id="unkown" type="radio" name="housetrained" value="Advanced">
+                            <i class="fas fa-check-circle"></i>
+                            <label for="unkown">Advanced</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <fieldset id="descr">
+                <div>
+                    <legend>Review</legend>
+                    <label for="description" style="display: none;">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="10" placeholder="This food recipe is..."></textarea>
+                </div>
+            </fieldset>
+            <div id="form-buttons">
+                <button type="reset">Cancel</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+    <script src="/static/js/app.js"></script>
+{% endblock %}

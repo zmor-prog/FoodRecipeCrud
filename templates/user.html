@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block button %}
+    <a href="{{ url_for('index') }}">      
+    </a>
+{% endblock %}
+
+{% block content %}
+    <section id="form">
+        <form action="{{ url_for('addUser') }}" method="POST">
+            <div class="columns">
+                <div class="col1">
+                    <div class="form-container">
+                        <label for="name">User Name</label>
+                        <input id="name" name="name" type="text" placeholder="User Name">
+                    </div>
+                    <div class="form-container">
+                        <label for="age">User Password</label>
+                        <input id="age" name="password" type="text" placeholder="Password">
+                    </div>
+                    <div class="form-container">
+                        <label for="breed">User Email</label>
+                        <input id="breed" name="email" type="text" placeholder="Email">
+                    </div>
+                    <div class="form-container">
+                        <label for="color">First Name</label>
+                        <input id="color" name="first" type="text" placeholder="John">
+                    </div>
+                    <div class="form-container">
+                        <label for="color">Last Name</label>
+                        <input id="color" name="last" type="text" placeholder="Doe">
+                    </div>                
+                </div>            
+            <div id="form-buttons">               
+                <button type="submit">Login</button>
+       
+            </div>
+        </form>
+    </section>
+    <script src="/static/js/app.js"></script>
+{% endblock %}

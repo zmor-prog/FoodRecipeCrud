@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block button %}
+    <a class="add-pet-btn" href="{{ url_for('add_pet') }}" alt="Add Pet">
+        <i class="fas fa-plus"></i>
+        Recipe
+    </a>
+{% endblock %}
+{% block content %}
+    <section id="not-found">
+        <img src="https://media1.giphy.com/media/cIDyoK8vQ4YFMvJk7m/giphy.gif?cid=ecf05e47nniklh4zxk6ejtpm81gagtwxela78qjrhilje2af&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Where is the food">
+        <h2>Hmm...it seems this page can't be found.<i class="fa-solid fa-circle-xmark"></i></h2>
+        <p>{{ msg }}</p>
+        <a class="back-btn" href="{{ url_for('index') }}">
+            <i class="fas fa-caret-left"></i>
+            Go Home
+        </a>
+    </section>
+{% endblock %}

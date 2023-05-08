@@ -9,7 +9,7 @@ This web app: **Building an crud recipe app.**
 
 Here's a walkthrough of implemented user stories:
 
-<img src='#' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/zmor-prog/FoodRecipeCrud/blob/main/foodcrudfinal.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  

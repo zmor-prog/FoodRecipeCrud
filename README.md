@@ -1,4 +1,4 @@
-# Web Development Final Project - *Sports Hub*
+# Principles of Database Systems Final Project - *Food Recipe*
 
 Submitted by: **Zamirah Morgan**
 
